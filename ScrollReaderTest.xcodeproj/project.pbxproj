@@ -14,6 +14,9 @@
 		C18AFE8E28BC570200D1432B /* ScrollReaderTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AFE8D28BC570200D1432B /* ScrollReaderTestTests.swift */; };
 		C18AFE9828BC570200D1432B /* ScrollReaderTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AFE9728BC570200D1432B /* ScrollReaderTestUITests.swift */; };
 		C18AFE9A28BC570200D1432B /* ScrollReaderTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AFE9928BC570200D1432B /* ScrollReaderTestUITestsLaunchTests.swift */; };
+		C18AFEA728BC571A00D1432B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AFEA628BC571A00D1432B /* ViewModel.swift */; };
+		C18AFEA928BC57DA00D1432B /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AFEA828BC57DA00D1432B /* TestModel.swift */; };
+		C18AFEAF28BCB26300D1432B /* SwiftUIPullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AFEAE28BCB26300D1432B /* SwiftUIPullToRefresh.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		C18AFE9328BC570200D1432B /* ScrollReaderTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollReaderTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18AFE9728BC570200D1432B /* ScrollReaderTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollReaderTestUITests.swift; sourceTree = "<group>"; };
 		C18AFE9928BC570200D1432B /* ScrollReaderTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollReaderTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C18AFEA628BC571A00D1432B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		C18AFEA828BC57DA00D1432B /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		C18AFEAE28BCB26300D1432B /* SwiftUIPullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIPullToRefresh.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 			children = (
 				C18AFE7C28BC570000D1432B /* ScrollReaderTestApp.swift */,
 				C18AFE7E28BC570000D1432B /* ContentView.swift */,
+				C18AFEA828BC57DA00D1432B /* TestModel.swift */,
+				C18AFEAE28BCB26300D1432B /* SwiftUIPullToRefresh.swift */,
+				C18AFEA628BC571A00D1432B /* ViewModel.swift */,
 				C18AFE8028BC570200D1432B /* Assets.xcassets */,
 				C18AFE8228BC570200D1432B /* Preview Content */,
 			);
@@ -257,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18AFEAF28BCB26300D1432B /* SwiftUIPullToRefresh.swift in Sources */,
 				C18AFE7F28BC570000D1432B /* ContentView.swift in Sources */,
+				C18AFEA728BC571A00D1432B /* ViewModel.swift in Sources */,
 				C18AFE7D28BC570000D1432B /* ScrollReaderTestApp.swift in Sources */,
+				C18AFEA928BC57DA00D1432B /* TestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -424,6 +436,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,6 +465,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
