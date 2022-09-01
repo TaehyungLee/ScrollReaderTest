@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseCore
+
 
 private struct OffsetPreferenceKey: PreferenceKey {
     
@@ -54,6 +56,7 @@ struct OffsettableScrollView<T: View>: View {
 struct ContentView: View {
     
     @StateObject var viewModel = ViewModel()
+    @State var bottomId = UUID()
     
     var body: some View {
         ZStack {
@@ -76,7 +79,8 @@ struct ContentView: View {
                     RefreshableScrollView { complete in
 //                        scrollView.scrollTo(viewModel.scrollTarget, anchor: .center)
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                            viewModel.appendPrevItem()
+//                            viewModel.appendPrevItem()
+                            viewModel.appendRecentItem()
                             complete()
                         }
                         
@@ -92,12 +96,12 @@ struct ContentView: View {
                         }
                     } content: {
                         LazyVStack {
-                            ForEach(viewModel.list) { item in
+                            ForEach(viewModel.list, id: \.id) { item in
                                 //LazyVStack : 내부 View가 실제로 필요할 때 View가 그려짐
                                 //VStack : 시작할때 전부 그림
                                 VStack {
                                     HStack {
-                                        Text(item.title)
+                                        Text(item.koreanName)
                                             .padding()
                                         Spacer()
 
@@ -111,10 +115,10 @@ struct ContentView: View {
                                     if item.id == viewModel.list.last?.id {
                                         viewModel.appendNextItem()
                                     }
-                                    
+
                                 }
                             }
-                            EmptyView()
+                            
                                 
                         }
                         
@@ -136,6 +140,10 @@ struct ContentView: View {
 
             }
 
+        }
+        .onAppear {
+            
+            viewModel.appendRecentItem()
         }
     }
 }
